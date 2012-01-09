@@ -1,0 +1,55 @@
+<%@ page import = "java.util.*" %>
+<%@ page import = "farcebook.*" %>
+
+<%
+
+if(request.getParameter("submit") == null){
+	response.sendRedirect("../index.jsp");
+}
+
+Repository repo = Repository.instance();
+String email = request.getParameter("userEmail");
+String pass1 = request.getParameter("password");
+String pass2 = request.getParameter("password2");
+
+if(email.equals("") || pass1.equals("")  || pass2.equals("") {
+     response.sendRedirect("../index.jsp?empty=1");
+}
+boolean goodEmail = false;
+if (email.contains("@") == true){
+	String validEmail[] = email.split("@");
+	if (validEmail[1].contains(".")) {
+         goodEmail = true; 
+     }
+}
+
+
+if(goodEmail==false){
+	response.sendRedirect("../index.jsp?badEmail=1");
+}
+else {
+<<<<<<< .mine
+     User currentUser = repo.createNewUser(email, pass1);
+     if(currentUser != null) {
+		//session.setAttribute("currentUser", currentUser);
+		response.sendRedirect("../personalInfo.jsp?ID=" + currentUser.getEntityID());
+	}
+=======
+	User currentUser = repo.createNewUser(email, pass1);
+
+
+		if(currentUser != null) {
+			session.setAttribute("currentUser", currentUser);
+			response.sendRedirect("../personalInfo.jsp");
+		}
+		else{
+			response.sendRedirect("../index.jsp?badEmail=1");
+		}
+>>>>>>> .r366
+     else {
+          response.sendRedirect("../index.jsp?taken=1");
+     }
+}
+
+
+%>

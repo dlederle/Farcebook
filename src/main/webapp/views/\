@@ -1,0 +1,8 @@
+
+
+     <form action = "controllers/loginController.jsp" method = "GET">
+	     <label for="email">Email: </label>
+          <input type = text size = 25 name = "email" id="email">
+		Password: <input type = password size = 25 name = "password" id="password">
+		<input class= "btn primary" type = submit name = submit value = "Log In">
+     </form>

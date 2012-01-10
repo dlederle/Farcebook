@@ -101,7 +101,12 @@ if (session.getAttribute("currentUser") != null){
                          out.print("[" + currentUser.getRequests().size() + "]");
                     }%>
                </a></li>
+                    
+                    <% /*
+                    //Comment back in when picture uploading works
                     <li><a href="#albums">Albums</a></li>
+                    */ %>
+                    
                     </ul>
                     <div class="pill-content">
                     <div class="active" id="feed">
@@ -120,10 +125,13 @@ if (session.getAttribute("currentUser") != null){
                     <jsp:include page = "views/entityList.jsp?type=group"/>
                     </div>
 
+                    <% /*
+                    //Comment back in when picture uploading works
                     <div id="albums">
                     <jsp:include page = "views/albums.jsp" />
                     </div>
-
+                    */%>
+                    
                     <div id="requests">
                     <%
                     //ArrayList<Post> tmp = currentUser.get

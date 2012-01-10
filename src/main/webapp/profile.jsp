@@ -81,7 +81,10 @@ if (session.getAttribute("currentUser") != null){
 			          <li><a href="#members"><%=name%>'s <%=profileEntity.getSubscriberType()%>s</a></li>
 			          <li><a href="#groups"><%=name%>'s Groups</a></li>
 			          <li><a href="#events"><%=name%>'s Events</a></li>
+                         <% /*
+                         //Comment back in when photos work
 			          <li><a href="#photos">Photos</a></li>
+                         */%>
 			     </ul>
 
 			     <div class="pill-content">
@@ -100,11 +103,12 @@ if (session.getAttribute("currentUser") != null){
 			          <div id ="events">
 			               <jsp:include page = "views/entityList.jsp?type=event"/>
 			          </div>
-
+                         <% /*
+                         //Comment back in when photos work
 			          <div id="photos">
 			               <jsp:include page = "views/albums.jsp"/>
 			          </div>
-		     	
+                         */%>
                     </div> <!---End pillcontent-->
 		     </div> <!---End-contend-->
 	     </div> <!--End container-->

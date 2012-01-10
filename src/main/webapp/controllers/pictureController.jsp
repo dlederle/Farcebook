@@ -19,7 +19,7 @@ if (request.getParameter("profilePicture").equals("yes"))
 }
 
 MultipartRequest mpr = 
-     new MultipartRequest(request, "../webapps/farceRepo/data/pictures/", 9999999);
+     new MultipartRequest(request, "../data/pictures/", 9999999);
 
 String source = "data/pictures/" + mpr.getOriginalFileName("filename");
 

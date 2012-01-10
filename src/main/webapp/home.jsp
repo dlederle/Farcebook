@@ -157,12 +157,12 @@ if (session.getAttribute("currentUser") != null){
           } else if(make.equals("group")) {
 
                %>
-                    <div class="group">
+                    <div class="group offset-two-thirds span4">
                     <jsp:include page="views/makeGroup.jsp"/>
                     </div>
                     <% } else if(make.equals("event")) {
                          %>
-                              <div class="event">
+                              <div class="event offset-two-thirds span4">
                               <jsp:include page="views/makeEvent.jsp"/>
                               </div>
                               <%

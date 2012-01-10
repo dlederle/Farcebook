@@ -6,6 +6,10 @@ img {
      width = 50%;
 }
 
+textarea {
+     resize: none;
+}
+
 
 .container-fluid {
      padding-top: 75px;
